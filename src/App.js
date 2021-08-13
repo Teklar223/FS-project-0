@@ -7,9 +7,11 @@ import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import Profile from "./pages/Profile";
+import ResetPassword from "./pages/ResetPassword";
 import { AuthContext } from "./helpers/AuthContext"
 import { useState, useEffect } from "react";
 import axios from "axios";
+import React from 'react';
 
 
 function App() {
@@ -22,11 +24,12 @@ function App() {
       if(response.data.error) {setAuthState({...authState, status: false});}
       else {setAuthState({username : response.data.username, status: true});}
     });
-  }, []);
+  }, [authState]);
 
   const logout = () => {
+    window.location.reload()
     localStorage.removeItem("accessToken");
-    setAuthState({username : "", status: false});
+    setAuthState({username : "", status: false});    
   }
 
   return (
@@ -51,7 +54,7 @@ function App() {
           ) : (
           <>
             <h1> Welcome {authState.username}! </h1>
-            <button onClick={logout}> Logout </button>
+              <button onClick={logout}> Logout </button>
           </>
           )}        
           </div>
@@ -63,9 +66,10 @@ function App() {
           <Route path="/registration" exact component={Registration} />
           <Route path="/login" exact component={Login} />
           <Route path="/profile/:username" exact component={Profile}/>
+          <Route path="/reset_password" exact component={ResetPassword}/>
           <Route path="*" exact component={PageNotFound} />
          </Switch>
-        </Router>
+       </Router>
        </AuthContext.Provider>
       </div>
   );

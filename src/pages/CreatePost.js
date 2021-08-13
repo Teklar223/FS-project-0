@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { AuthContext } from "../helpers/AuthContext";
 
 function CreatePost() {
+    // eslint-disable-next-line no-unused-vars
     const { authState } = useContext(AuthContext);
     const initalValues ={ title: "", postText: "",};
     let history = useHistory();

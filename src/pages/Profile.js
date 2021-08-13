@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import { AuthContext } from "../helpers/AuthContext";
 
 function Profile() {
     const [listOfPosts, setListOfPosts]= useState([]);
     const [likedPosts, setLikedPosts] = useState([]);
     let { username } = useParams();
     let history = useHistory();
+    const { authState } = useContext(AuthContext);
 
     useEffect(() => {
         if (!localStorage.getItem("accessToken")){
@@ -54,7 +56,9 @@ function Profile() {
     return (
         <div>
             <h2> Username: {username}</h2>
-            <h0></h0>
+            {authState.username===username && 
+            <button onClick={()=>{history.push("/reset_password")}}> Change My Password</button>}
+            <h0></h0>         
             <h3>{username}'s posts:</h3>
             {listOfPosts.map((value, key) => {
         return (          

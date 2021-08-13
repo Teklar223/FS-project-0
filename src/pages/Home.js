@@ -4,9 +4,11 @@ import { Link, useHistory } from "react-router-dom";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import { AuthContext } from "../helpers/AuthContext";
 
+
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const { authState } = useContext(AuthContext);
   let history = useHistory();
 
