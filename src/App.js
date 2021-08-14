@@ -41,6 +41,7 @@ function App() {
           {authState.status ? (
           <>
             <Link to="/"> Home </Link>
+            <Link to={`/profile/${authState.username}`}> Profile </Link>
             <Link to="/createpost"> Create A Post </Link>
             </>
           ): (<h1> please login to view site content</h1>) }       

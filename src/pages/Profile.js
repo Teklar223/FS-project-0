@@ -66,7 +66,7 @@ function Profile() {
             <div className="title">{value.title} </div>
             <div className="body" onClick={() => {history.push(`/post/${value.id}`)}}>{value.content} </div>
             <div className="footer">
-              <div className="username">{value.UserUsername}</div>
+              <div className="username">{/*value.UserUsername*/}</div>
               <div className="buttons">              
                 <ThumbUpAltIcon onClick={() => {likePost(value.id);}}               
                   className={likedPosts.includes(value.id) ? "unlikeBttn" : "likeBttn" }
