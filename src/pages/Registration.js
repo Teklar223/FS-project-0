@@ -17,7 +17,7 @@ function Registration() {
     });
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/user", data).then(() => {
+        axios.post("https://full-stack-api-yonatan-ratner.herokuapp.com/user", data).then(() => {
             console.log(data);
             alert("user registered!");
             history.push("/");

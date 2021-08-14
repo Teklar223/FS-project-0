@@ -17,15 +17,15 @@ function Profile() {
             history.push("/login");
           }
 
-        axios.get(`http://localhost:3001/user/basicinfo/${username}`).then((response)=>{
+        axios.get(`https://full-stack-api-yonatan-ratner.herokuapp.com/user/basicinfo/${username}`).then((response)=>{
             console.log("RESPONSE: "+response.data);
             if (!response.data){history.push("/pagenotfound");}
         });
         
-        axios.get(`http://localhost:3001/posts/byuserid/${username}`).then((response)=>{
+        axios.get(`https://full-stack-api-yonatan-ratner.herokuapp.com/posts/byuserid/${username}`).then((response)=>{
             setListOfPosts(response.data);
         });
-        axios.get("http://localhost:3001/posts", { headers: { accessToken: localStorage.getItem("accessToken")}}
+        axios.get("https://full-stack-api-yonatan-ratner.herokuapp.com/posts", { headers: { accessToken: localStorage.getItem("accessToken")}}
         ).then((response) => {
           setLikedPosts(response.data.likedPosts.map((like) => {return like.PostId;}));
     });
@@ -33,7 +33,7 @@ function Profile() {
 
     /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ LIKE SYSTEM ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
   const likePost = (postId) => {
-    axios.post("http://localhost:3001/likes", {PostId: postId}, { headers: { accessToken: localStorage.getItem("accessToken")}}
+    axios.post("https://full-stack-api-yonatan-ratner.herokuapp.com/likes", {PostId: postId}, { headers: { accessToken: localStorage.getItem("accessToken")}}
     ).then((response) => {
       setListOfPosts(listOfPosts.map((post) => {
         if (post.id === postId){

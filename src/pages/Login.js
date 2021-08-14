@@ -13,7 +13,7 @@ function Login() {
 
     const login = () => {
         const data = {username: username, password: password};
-        axios.post("http://localhost:3001/user/login", data).then((response) => {
+        axios.post("https://full-stack-api-yonatan-ratner.herokuapp.com/user/login", data).then((response) => {
             if (response.data.error) {alert(response.data.error);}
             else {
                 localStorage.setItem("accessToken", response.data.token);

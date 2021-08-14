@@ -8,7 +8,7 @@ function ResetPassword() {
     let history = useHistory();
 
     const resetPassword = () => {
-        axios.put("http://localhost:3001/user/resetpassword",
+        axios.put("https://full-stack-api-yonatan-ratner.herokuapp.com/user/resetpassword",
         {oldPassword: oldPassword, newPassword: newPassword},
         { headers: { accessToken: localStorage.getItem("accessToken")}})
         .then((response)=>{

@@ -18,7 +18,7 @@ function App() {
   const [ authState, setAuthState] = useState({username : "", status: false});
 
   useEffect(() => {
-    axios.get("http://localhost:3001/user/auth" , {headers : {
+    axios.get("https://full-stack-api-yonatan-ratner.herokuapp.com/user/auth" , {headers : {
       accessToken: localStorage.getItem("accessToken"),
     }}).then((response) => {
       if(response.data.error) {setAuthState({...authState, status: false});}
