@@ -28,7 +28,6 @@ function Registration() {
     //consider also making a uniqe form for later changes such that formContainer => registerForm
     return (
         <div className="createPostPage">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
           <Formik initialValues={initalValues} onSubmit={onSubmit} validationSchema={validationSchema}>
               <Form className="formContainer">           
                 <label>Username: </label>

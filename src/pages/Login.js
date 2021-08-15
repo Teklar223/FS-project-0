@@ -24,7 +24,7 @@ function Login() {
     };
 
     return (
-        <div className="loginContainer">
+        <div className="loginContainer">      
             <label>Username: </label>
             <input type="text" onChange={(Event) => {setUsername(Event.target.value)}}/>
 

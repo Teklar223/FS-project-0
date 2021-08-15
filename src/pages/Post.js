@@ -72,7 +72,7 @@ function Post() {
         }
     };
 
-    return (
+    return (      
         <div className="postPage">
             <div className="leftSide">
                 <div className="post" id="individual">

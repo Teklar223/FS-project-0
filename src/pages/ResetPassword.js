@@ -23,8 +23,7 @@ function ResetPassword() {
     };
 
     return (
-        <div>           
-           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <div> 
            <h1 style={{"textDecoration":"underline"}}>Reset your password!</h1>
             <div>
                <h2>input old password for confirmation:</h2>
