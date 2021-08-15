@@ -335,9 +335,9 @@ button {
 
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
-   * {font-size: 20px;} /* shared property */
+   * {font-size: 15px;} /* shared property */
    .navbar {
-     font-size: 10px
+     font-size: 5px
    }
   .col-es-1 {width: 8.33%;}
   .col-es-2 {width: 16.66%;}
@@ -355,7 +355,7 @@ button {
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
-  * {font-size: 25px;} /* shared property */
+  * {font-size: 15px;} /* shared property */
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
