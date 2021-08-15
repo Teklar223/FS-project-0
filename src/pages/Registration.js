@@ -27,7 +27,8 @@ function Registration() {
     //change to unique classNames with complementing CSS (createPostPage => registrationPage, inputCreatePost => inputRegistration)
     //consider also making a uniqe form for later changes such that formContainer => registerForm
     return (
-        <div className="createPostPage"> 
+        <div className="createPostPage">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
           <Formik initialValues={initalValues} onSubmit={onSubmit} validationSchema={validationSchema}>
               <Form className="formContainer">           
                 <label>Username: </label>

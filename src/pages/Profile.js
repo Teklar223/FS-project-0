@@ -62,7 +62,8 @@ function Profile() {
             <h3>{username}'s posts:</h3>
             {listOfPosts.map((value, key) => {
         return (          
-         <div key={key} className="post">         
+         <div key={key} className="post"> 
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
             <div className="title">{value.title} </div>
             <div className="body" onClick={() => {history.push(`/post/${value.id}`)}}>{value.content} </div>
             <div className="footer">
