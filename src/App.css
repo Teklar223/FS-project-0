@@ -335,7 +335,10 @@ button {
 
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
-   * {font-size: 35px;} /* shared property */
+   * {font-size: 20px;} /* shared property */
+   .navbar {
+     font-size: 10px
+   }
   .col-es-1 {width: 8.33%;}
   .col-es-2 {width: 16.66%;}
   .col-es-3 {width: 25%;}
@@ -353,7 +356,6 @@ button {
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
   * {font-size: 25px;} /* shared property */
-  .navbar {font-size: 15px;}
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
@@ -387,7 +389,7 @@ button {
  
  /* Large devices (laptops/desktops, 992px and up) */
  @media only screen and (min-width: 992px) {
-  * {font-size: 30px;} /* shared property */
+  * {font-size: 25px;} /* shared property */
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
@@ -404,7 +406,7 @@ button {
  
  /* Extra large devices (large laptops and desktops, 1200px and up) */
  @media only screen and (min-width: 1200px) {   
-  * {font-size: 35px;} /* shared property */
+  * {font-size: 25px;} /* shared property */
   .col-l-1 {width: 8.33%;}
   .col-l-2 {width: 16.66%;}
   .col-l-3 {width: 25%;}
