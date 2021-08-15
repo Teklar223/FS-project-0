@@ -50,7 +50,7 @@ function App() {
           {!authState.status ? (
             <>           
           <Link to="/login"> login </Link>
-          <Link to="/registration" style ={{marginRight: '10px'}}> register </Link>
+          <Link to="/registration"> register </Link>
           </>
           ) : (
           <>
