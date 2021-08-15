@@ -39,12 +39,12 @@ function App() {
         <div className="navbar">
           <div className="links">
           {authState.status ? (
-          <>
+            <>
             <Link to="/"> Home </Link>
             <Link to={`/profile/${authState.username}`}> Profile </Link>
             <Link to="/createpost"> Create A Post </Link>
             </>
-          ): (<h1> please login to view site content</h1>) }       
+          ): (<h1 style ={{textAlign: 'left'}}> please login to view site content</h1>) }       
           </div>
           <div className="loggedInContainer">        
           {!authState.status ? (

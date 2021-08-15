@@ -171,6 +171,12 @@ a {
   background-color: white;
 }
 
+.navbar Link {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+}
+
 .navbar h1 {
   text-align: right;
   margin-right: 10px;
@@ -356,6 +362,9 @@ button {
  /* Small devices (portrait tablets and large phones, 600px and up) */
  @media only screen and (min-width: 600px) {
   * {font-size: 15px;} /* shared property */
+  .navbar {
+    font-size: 5px
+  }
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
