@@ -344,7 +344,6 @@ button {
    * {font-size: 15px;} /* shared property */
    .navbar {
      font-size: 5px;
-     width: 95%;
    }
    
   .col-es-1 {width: 8.33%;}
